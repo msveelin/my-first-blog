@@ -6,6 +6,7 @@
     <title>Vee's Blog</title>
   </head>
   <body>
+   
     <header>
       <h1>Vee's Blog</h1>
       <div>
@@ -14,18 +15,16 @@
     </header>
     <h1>Welcome to Blogger</h1>
     <div>
-      <article>
-        <time>Published: 03.10.2023</time>
-        <h2><a href="/">First Post</a></h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur
-          harum rerum suscipit inventore ad neque possimus. Deserunt, amet totam
-          officiis doloremque consequuntur praesentium natus, eligendi odio
-          tempore rem id eos.
-        </p>
-      </article>
+        {% for post in posts %}
+        <article>
+            <time>Published: {{post.published_date}}</time>
+            <h2><a href="/">{{post.title}}</a></h2>
+            <p>{{post.text|linebreaksbr}}</p>
+          </article>
+        {% endfor %}
+      
 
-      <article>
+      <!-- <article>
         <time>Published: 04.11.2023</time>
         <h2><a href="/">Second Post</a></h2>
         <p>
@@ -34,7 +33,7 @@
           officiis doloremque consequuntur praesentium natus, eligendi odio
           tempore rem id eos.
         </p>
-      </article>
+      </article> -->
     </div>
   </body>
 </html>
