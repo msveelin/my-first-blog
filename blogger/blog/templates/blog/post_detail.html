@@ -1,5 +1,11 @@
 {% extends 'blog/base.html'%} {%block content%}
 <div class="p-10">
+    <div class="flex justify-end">
+        <a class="flex bg-orange-300 p-2 rounded-md" href="{% url  'post_edit' pk=post.pk%}">
+        {% include "./icons/edit-3-svgrepo-com.svg" %} <span class="ml-2">Edit Post</span>
+    </a>
+    </div>
+    
   <article class="mt-3">
     {% if post.published_date %}
     <time class="text-gray-500 italic mb-3"

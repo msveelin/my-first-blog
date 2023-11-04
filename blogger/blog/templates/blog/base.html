@@ -15,11 +15,12 @@
     <header class="w-full bg-orange-300 flex items-center justify-between text-white p-5">
       <h1 class="text-4xl logo font-bold"><a href="/">Vee's Blog</a></h1>
       <div>
-        <a href="#">About</a>
+        <a class="flex p-2 border border-white rounded-md" href="{% url 'post_new' %}">{% include './icons/add-file-svgrepo-com.svg' %} <span class="ml-2">Add Post</span></a>
       </div>
     </header>
     
     {%block content%}
     {%endblock%}
+    
   </body>
 </html>
