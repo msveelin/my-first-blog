@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Griffy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.logo{
+    font-family: 'Griffy';
+}

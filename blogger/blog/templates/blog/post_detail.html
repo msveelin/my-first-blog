@@ -1,0 +1,14 @@
+{% extends 'blog/base.html'%} {%block content%}
+<div class="p-10">
+  <article class="mt-3">
+    {% if post.published_date %}
+    <time class="text-gray-500 italic mb-3"
+      >Published: {{post.published_date}}</time
+    >
+    {%endif%}
+    <h2 class="text-5xl mt-4 mb-3 text-orange-300 font-bold">{{post.title}}
+    </h2>
+    <p class="text-justify">{{post.text|linebreaksbr}}</p>
+  </article>
+</div>
+{%endblock%}
